@@ -13,10 +13,10 @@ resource "azurerm_public_ip" "public" {
 
 # Create NICs
 resource "azurerm_network_interface" "transport" {
-  name                 = "${var.name}-transport-nic"
-  location             = data.azurerm_resource_group.rg_c8000v.location
-  resource_group_name  = data.azurerm_resource_group.rg_c8000v.name
-  enable_ip_forwarding = true
+  name                  = "${var.name}-transport-nic"
+  location              = data.azurerm_resource_group.rg_c8000v.location
+  resource_group_name   = data.azurerm_resource_group.rg_c8000v.name
+  ip_forwarding_enabled = true
 
   ip_configuration {
     name                          = "${var.name}-transport-nic"
@@ -31,10 +31,10 @@ resource "azurerm_network_interface" "transport" {
 }
 
 resource "azurerm_network_interface" "service" {
-  name                 = "${var.name}-service-nic"
-  location             = data.azurerm_resource_group.rg_c8000v.location
-  resource_group_name  = data.azurerm_resource_group.rg_c8000v.name
-  enable_ip_forwarding = true
+  name                  = "${var.name}-service-nic"
+  location              = data.azurerm_resource_group.rg_c8000v.location
+  resource_group_name   = data.azurerm_resource_group.rg_c8000v.name
+  ip_forwarding_enabled = true
 
   ip_configuration {
     name                          = "${var.name}-service-nic"
