@@ -14,4 +14,6 @@ variable "route53_zone" {
   default = ""
 }
 
+variable "acl_cidr_blocks" {}
+
 variable "common_tags" {}
