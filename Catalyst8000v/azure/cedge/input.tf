@@ -13,4 +13,6 @@ variable "instance_type" {}
 variable "account_username" {}
 variable "account_password" {}
 
+variable "acl_cidr_blocks" {}
+
 variable "common_tags" {}
